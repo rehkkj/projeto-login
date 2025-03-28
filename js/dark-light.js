@@ -18,12 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
         rememberme.classList.toggle('dark');
         register.classList.toggle('dark');
         
-        // Salvar preferência no localStorage
         const isDark = body.classList.contains('dark');
         localStorage.setItem('darkMode', isDark);
     });
 
-    // Verificar preferência salva ao carregar a página
     const darkMode = localStorage.getItem('darkMode') === 'true';
     if (darkMode) {
         trilho.classList.add('dark');
