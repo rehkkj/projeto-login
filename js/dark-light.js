@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const register = document.querySelector('.register');
 
     trilho.addEventListener('click', () => {
-        // Alternar classes dark nos elementos
         trilho.classList.toggle('dark');
         body.classList.toggle('dark');
         container.classList.toggle('dark');
@@ -18,5 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
         rememberme.classList.toggle('dark');
         register.classList.toggle('dark');
+        
+        // Salvar preferência no localStorage
+        const isDark = body.classList.contains('dark');
+        localStorage.setItem('darkMode', isDark);
     });
+
+    // Verificar preferência salva ao carregar a página
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    if (darkMode) {
+        trilho.classList.add('dark');
+        body.classList.add('dark');
+        container.classList.add('dark');
+        inputboxes.forEach(inputbox => inputbox.classList.add('dark'));
+        rememberme.classList.add('dark');
+        register.classList.add('dark');
+    }
 });
