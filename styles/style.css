@@ -12,6 +12,16 @@ body {
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;
+    transition: 0.5s;
+}
+
+body.dark {
+    background: url('../img/fundo2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 main {
@@ -29,13 +39,20 @@ main {
     right: 410px;
     transform: translate(-50%, -50%);
     width: 360px;
-    background-color: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    color: rgb(0, 0, 0);
+    color: #333;
     padding: 40px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.57);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+}
+
+.container.dark {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #f0f0f0;
 }
 
 .container h1 {
@@ -43,75 +60,100 @@ main {
     text-align: center;
 }
 
-.input-box {
+.inputbox {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
-.input-box input {
+.inputbox input {
     width: 100%;
     height: 80%;
     background-color: transparent;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 40px;
     outline: none;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: #333;
     padding: 20px 45px 20px 20px;
+    transition: all 0.5s ease;
 }
 
-.input-box input::placeholder {
-    color: #000000;
+.inputbox.dark input {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #f0f0f0;
 }
 
-.input-box i {
+.inputbox input::placeholder {
+    color: #555;
+}
+
+.container.dark .inputbox input::placeholder {
+    color: #ccc;
+}
+
+.inputbox i {
     position: absolute;
     right: 20px;
     top: 25%;
     font-size: 20px;
 }
 
-.remember-me {
+.rememberme {
     font-size: 15px;
     display: flex;
     justify-content: space-between;
     margin: -15px 0 15px;
+    transition: all 0.5s ease;
 }
 
-.remember-me label input {
-    accent-color: rgb(0, 0, 0);
+.rememberme label input {
+    accent-color: #a55a46;
     margin-right: 5px;
 }
 
-.remember-me a {
-    text-decoration: none;
-    color: #c36e59;
-    font-weight: 500;
+.container.dark .rememberme label input {
+    accent-color: #e68a6f;
 }
 
-.remember-me a:hover {
+.rememberme a {
+    text-decoration: none;
+    color: #a55a46;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.rememberme a:hover {
+    color: #7b3a2a;
     text-decoration: underline;
+}
+
+.container.dark .rememberme a {
+    color: #e68a6f;
+}
+
+.container.dark .rememberme a:hover {
+    color: #ff9d80;
 }
 
 .login {
     width: 100%;
     height: 30px;
-    background-color: rgba(0, 0, 0, 0.071);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    color: rgb(0, 0, 0);
-    border-color: rgba(255, 255, 255, 0.163);
+    color: #333;
+    border-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.57);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     margin: 5px 0;
+    transition: all 0.3s;
 }
 
 .login:hover {
-    transform: scale(1.1);
-    transition: 0.2s;
+    transform: scale(1.05);
 }
 
 .register {
@@ -123,12 +165,22 @@ main {
 
 .register a {
     text-decoration: none;
-    color: #c36e59;
+    color: #a55a46;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 .register a:hover {
+    color: #7b3a2a;
     text-decoration: underline;
+}
+
+.container.dark .register a {
+    color: #e68a6f;
+}
+
+.container.dark .register a:hover {
+    color: #ff9d80;
 }
 
 header a {
@@ -164,9 +216,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: "Poppins", sans-serif;
-    background: #ea886f;
+    background: #d87a62;
     height: 8vh;
-
 }
 
 nav a {
@@ -176,10 +227,39 @@ nav a {
 .nav-list {
     list-style: none;
     display: flex;
-
 }
 
 .nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
+}
+
+.trilho {
+    width: 30px;
+    height: 15px;
+    background-color: black;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.trilho .indicador {
+    width: 15px;
+    height: 15px;
+    background-color: #6a3d34;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark {
+    background-color: white;
+}
+
+.trilho.dark .indicador {
+    left: 15px;
+    background-color: #d87a62;
 }
