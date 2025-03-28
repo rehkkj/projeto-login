@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('../img/fundo5.png');
+    background: url('../img/fundo2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,7 +16,7 @@ body {
 }
 
 body.dark {
-    background: url('../img/fundo4.png');
+    background: url('../img/fundo3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -115,12 +115,12 @@ main {
 }
 
 .rememberme label input {
-    accent-color: #a55a46;
+    accent-color: #ffffff;
     margin-right: 5px;
 }
 
 .container.dark .rememberme label input {
-    accent-color: #e68a6f;
+    accent-color: #000000;
 }
 
 .rememberme a {
@@ -278,7 +278,7 @@ body.dark nav a:hover {
 .trilho {
     width: 30px;
     height: 15px;
-    background-color: #ddd;
+    background-color: #8b8b8b;
     border-radius: 20px;
     position: absolute;
     right: 35px;
@@ -291,7 +291,7 @@ body.dark nav a:hover {
 .trilho .indicador {
     width: 15px;
     height: 15px;
-    background-color: #a55a46;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     transform: scale(.9);
     position: absolute;
@@ -300,10 +300,10 @@ body.dark nav a:hover {
 }
 
 .trilho.dark {
-    background-color: #555555;
+    background-color: #303030;
 }
 
 .trilho.dark .indicador {
     left: 15px;
-    background-color: #e68a6f;
+    background-color: rgba(255, 255, 255, 0.3);
 }
