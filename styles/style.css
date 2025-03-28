@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('../img/fundo1.png');
+    background: url('../img/fundo5.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,7 +16,7 @@ body {
 }
 
 body.dark {
-    background: url('../img/fundo2.png');
+    background: url('../img/fundo4.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -39,12 +39,12 @@ main {
     right: 410px;
     transform: translate(-50%, -50%);
     width: 360px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    color: #333;
+    color: #222;
     padding: 40px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     transition: all 0.5s ease;
 }
@@ -70,23 +70,24 @@ main {
 .inputbox input {
     width: 100%;
     height: 80%;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 40px;
     outline: none;
     font-size: 16px;
-    color: #333;
+    color: #222;
     padding: 20px 45px 20px 20px;
     transition: all 0.5s ease;
 }
 
 .inputbox.dark input {
+    background-color: rgba(0, 0, 0, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: #f0f0f0;
 }
 
 .inputbox input::placeholder {
-    color: #555;
+    color: #444;
 }
 
 .container.dark .inputbox input::placeholder {
@@ -98,6 +99,11 @@ main {
     right: 20px;
     top: 25%;
     font-size: 20px;
+    color: #444;
+}
+
+.container.dark .inputbox i {
+    color: #ccc;
 }
 
 .rememberme {
@@ -119,41 +125,48 @@ main {
 
 .rememberme a {
     text-decoration: none;
-    color: #a55a46;
-    font-weight: 500;
+    color: #111;
+    font-weight: 600;
     transition: color 0.5s;
 }
 
 .rememberme a:hover {
-    color: #7b3a2a;
+    color: #333;
     text-decoration: underline;
 }
 
 .container.dark .rememberme a {
-    color: #e68a6f;
+    color: #f0f0f0;
 }
 
 .container.dark .rememberme a:hover {
-    color: #ff9d80;
+    color: #ccc;
 }
 
 .login {
     width: 100%;
     height: 30px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-    color: #333;
-    border-color: rgba(255, 255, 255, 0.3);
+    color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 5px 0;
     transition: all 0.5s;
 }
 
 .login:hover {
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.container.dark .login {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .register {
@@ -165,29 +178,30 @@ main {
 
 .register a {
     text-decoration: none;
-    color: #a55a46;
-    font-weight: 500;
+    color: #111;
+    font-weight: 600;
     transition: color 0.5s;
 }
 
 .register a:hover {
-    color: #7b3a2a;
+    color: #333;
     text-decoration: underline;
 }
 
 .container.dark .register a {
-    color: #e68a6f;
+    color: #f0f0f0;
 }
 
 .container.dark .register a:hover {
-    color: #ff9d80;
+    color: #ccc;
 }
 
 header a {
-    color: white;
+    color: #111;
     text-decoration: none;
     transition: 0.5s;
     height: 50%;
+    font-weight: 600;
 }
 
 header ul {
@@ -197,7 +211,7 @@ header ul {
 }
 
 header a:hover {
-    opacity: 0.7;
+    color: #333;
     transform: scale(1.1);
     transition: 0.5s;
 }
@@ -209,6 +223,12 @@ header a:hover {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 40px;
+    color: #111;
+    font-weight: 700;
+}
+
+body.dark .logo {
+    color: #f0f0f0;
 }
 
 nav {
@@ -216,35 +236,33 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: "Poppins", sans-serif;
-    background: #f8b9a9; 
+    background: rgba(255, 255, 255, 0.3);
     height: 8vh;
     transition: background-color 0.5s ease;
+    backdrop-filter: blur(5px);
 }
 
 body.dark nav {
-    background: #000000; 
+    background: rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-    color: black; 
+    color: #111;
     transition: color 0.5s ease;
+    font-weight: 600;
 }
-
 
 body.dark nav a {
-    color: white !important; 
+    color: #f0f0f0;
 }
 
-
 nav a:hover {
-    opacity: 0.7;
+    color: #333;
     transform: scale(1.1);
 }
 
-
 body.dark nav a:hover {
-    color: #f0f0f0 !important; 
-    opacity: 0.9;
+    color: #ccc;
 }
 
 .nav-list {
@@ -260,7 +278,7 @@ body.dark nav a:hover {
 .trilho {
     width: 30px;
     height: 15px;
-    background-color: white;
+    background-color: #ddd;
     border-radius: 20px;
     position: absolute;
     right: 35px;
@@ -273,7 +291,7 @@ body.dark nav a:hover {
 .trilho .indicador {
     width: 15px;
     height: 15px;
-    background-color: #d87a62;
+    background-color: #a55a46;
     border-radius: 50%;
     transform: scale(.9);
     position: absolute;
@@ -287,5 +305,5 @@ body.dark nav a:hover {
 
 .trilho.dark .indicador {
     left: 15px;
-    background-color: #949494;
+    background-color: #e68a6f;
 }
